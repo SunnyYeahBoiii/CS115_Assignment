@@ -9,7 +9,7 @@
 2. [Notes](#notes)
 3. [Documents](#documents)
 
-## Work Plan (About 2 ~ 2,5 months): <a id = "work-plan"></a>
+## Work Plan (About 1 ~ 1,5 months): <a id = "work-plan"></a>
 
 ![Work Plan Diagram](./images/CS115_Assignment_workPlan.drawio.svg)
 
@@ -30,12 +30,12 @@ Note: In this Phase, we do it by seperated individuals. Then in the next phase, 
 - Do it with some datasets, probably from ISLP library 
 - Make plots to make people understand the insight of LDQ and QDA.
 
-### Phase 2: Gathering Resources for the slide show (1 week): <a id = "phase-two"></a>
+### Phase 2: Gathering Resources for the slide show (3 days): <a id = "phase-two"></a>
 
 - Meets and argue about the first Phase.
 - Gathers resources, including plots, dataset visualizations, model predictions to reveal the insights.
 
-### Phase 3: Learn Beamer Latex and Get the slides going (2 weeks): <a id = "phase-three"></a>
+### Phase 3: Learn Beamer Latex and Get the slides going (4 days): <a id = "phase-three"></a>
 
 - Learn Beamer Latex
 - Prepare the Slides from the content got from Phase 2
@@ -52,3 +52,12 @@ This tracks the progress of the group.
 Feel free to add more.
 
 - [Introduction to Statistical Learning](./documents/An-Introduction-to-Statistical-Learning-with-Applications-in-Python.pdf)
+- [LDA & QDA from scikit-learn.org](https://scikit-learn.org/stable/modules/lda_qda.html)
+- [LDA - Machine Learning cơ bản - Vũ Khắc Tiệp](https://machinelearningcoban.com/2017/06/30/lda/)
+- [QDA - Kaggle](https://www.kaggle.com/discussions/general/448328)
+- [LDA & QDA tutorial Paper](https://arxiv.org/abs/1906.02590?utm_source=chatgpt.com)
+- [Gaussian Discriminant Analysis, including QDA and LDA - EECS](https://people.eecs.berkeley.edu/~jrs/189/lec/07.pdf?utm_source=chatgpt.com)
+- [Comprehensive Guide on Linear Discriminant Analysis - analyticsvidhya.com](https://www.analyticsvidhya.com/blog/2024/03/comprehensive-guide-on-linear-discriminant-analysis/?utm_source=chatgpt.com)
+
+- [Lab LDA & QDA - science.smith.edu](https://www.science.smith.edu/~jcrouser/SDS293/labs/lab5-py.html?utm_source=chatgpt.com)
+- [Lab LDA - machinelearningmastery.com](https://machinelearningmastery.com/linear-discriminant-analysis-with-python/?utm_source=chatgpt.com)
