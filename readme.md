@@ -42,7 +42,9 @@ This assignment is focused on Linear Discriminant Analysis and Quadratic Discrim
 
 ## Work Plan (About 1 ~ 1,5 months): <a id = "work-plan"></a>
 
-![Work Plan Diagram](./images/CS115_Assignment_workPlan.drawio.svg)
+<div align="center">
+    <img src=".\images\CS115_Assignment_workPlan.drawio.svg">
+</div>
 
 There are 4 Phases:
 ### Phase 1: Learn LDA & QDA basis and make some experiment with it (about 4 weeks ~ 1 month): <a id = "phase-one"></a>
