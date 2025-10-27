@@ -1,13 +1,33 @@
-# This is the document folder for my assignment in subject CS115
+<p align="center">
+  <a href="https://www.uit.edu.vn/" title="Trường Đại học Công nghệ Thông tin" style="border: none;">
+    <img src="https://i.imgur.com/WmMnSRt.png" alt="Trường Đại học Công nghệ Thông tin | University of Information Technology">
+  </a>
+</p>
+
+# This is the document folder for me and my team's assignment in subject CS115
+This assignment is focused on Linear Discriminant Analysis and Quadratic Discriminant Analysis
 
 # Table of Contents:
-1. [Work Plan](#work-plan)
+1. [Team Members](#team-member)
+2. [Work Plan](#work-plan)
     1. [Phase 1](#phase-one)
     2. [Phase 2](#phase-two)
     3. [Phase 3](#phase-three)
     4. [Phase 4](#phase-four)
-2. [Notes](#notes)
-3. [Documents](#documents)
+3. [Notes](#notes)
+4. [Documents](#documents)
+
+## Our team <a id = "team-member"></a>
+
+<center>
+
+|Student ID | Full Name |
+|:---:|:---:|
+|24521421|Vũ Minh Phương|
+||Nguyễn Lê Duy Khang|
+||Phạm Ngọc Phú Thịnh|
+
+</center>
 
 ## Work Plan (About 1 ~ 1,5 months): <a id = "work-plan"></a>
 
