@@ -19,15 +19,26 @@ This assignment is focused on Linear Discriminant Analysis and Quadratic Discrim
 
 ## Our team <a id = "team-member"></a>
 
-<center>
-
-|Student ID | Full Name |
-|:---:|:---:|
-|24521421|Vũ Minh Phương|
-||Nguyễn Lê Duy Khang|
-||Phạm Ngọc Phú Thịnh|
-
-</center>
+<div align="center">
+    <table>
+        <tr>
+        <th>Student Id</th> 
+        <th>Full Name</th> 
+        </tr>
+        <tr>
+            <td>24521421</td>
+            <td>Vũ Minh Phương</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Nguyễn Lê Duy Khang</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Phạm Ngọc Phú Thịnh</td>
+        </tr>
+    </table>
+</div>
 
 ## Work Plan (About 1 ~ 1,5 months): <a id = "work-plan"></a>
 
