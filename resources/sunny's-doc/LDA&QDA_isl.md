@@ -48,14 +48,14 @@ $$P_k(x) = \frac{\pi_k\frac{1}{\sqrt{2\pi}\sigma} exp(-\frac{1}{2\sigma^2}(x - \
 
 To find the class where $x$ belongs, we need to find class $k$ whereas $P_k(x)$ is maximal, which means:
 
-$$\delta_k(x) = \underset{k}{\argmax} \frac{\pi_k\frac{1}{\sqrt{2\pi}\sigma} exp(-\frac{1}{2\sigma^2}(x - \mu_k)^2)}{\sum_{l = 1}^K\pi_l\frac{1}{\sqrt{2\pi}\sigma} exp(-\frac{1}{2\sigma^2}(x - \mu_l)^2)}$$
+$$\delta_k(x) = \underset{k}{argmax} \frac{\pi_k\frac{1}{\sqrt{2\pi}\sigma} exp(-\frac{1}{2\sigma^2}(x - \mu_k)^2)}{\sum_{l = 1}^K\pi_l\frac{1}{\sqrt{2\pi}\sigma} exp(-\frac{1}{2\sigma^2}(x - \mu_l)^2)}$$
 
-$$\Leftrightarrow \delta_k(x) = \underset{k}{\argmax} \pi_k \frac{1}{\sqrt{2\pi}\sigma} exp(-\frac{1}{2\sigma^2}(x - \mu_k)^2)$$
+$$\Leftrightarrow \delta_k(x) = \underset{k}{argmax} \pi_k \frac{1}{\sqrt{2\pi}\sigma} exp(-\frac{1}{2\sigma^2}(x - \mu_k)^2)$$
 
-$$\Leftrightarrow \delta_k(x) = \underset{k}{\argmax} \pi_k  exp(-\frac{1}{2\sigma^2}(x - \mu_k)^2)$$
+$$\Leftrightarrow \delta_k(x) = \underset{k}{argmax} \pi_k  exp(-\frac{1}{2\sigma^2}(x - \mu_k)^2)$$
 
 
-$$\Leftrightarrow \delta_k(x) = \underset{k}{\argmax} \log(\pi_k) + \frac{x\mu_k}{\sigma^2} - \frac{\mu_k^2}{2\sigma^2}$$
+$$\Leftrightarrow \delta_k(x) = \underset{k}{argmax} \log(\pi_k) + \frac{x\mu_k}{\sigma^2} - \frac{\mu_k^2}{2\sigma^2}$$
 
 
 The terms Linear Discriminant Analysis is from the fact that the discriminant function $\delta_k(x)$ is in linear form.
