@@ -1,4 +1,10 @@
-# Why don't we use Logistic Regression instead of Linear Discriminant Analysis
+# Table of contents:
+1. [Why don't we use Logistic Regression instead of Linear Discriminant Analysis](#why)
+2. [Bayes's Theorem](#bayes)
+3. [Linear Discriminant Analysis for $p = 1$](#lda-p1)
+4. [Linear Discriminant Analysis for $p > 1$](#lda-p2)
+
+# Why don't we use Logistic Regression instead of Linear Discriminant Analysis <a id = "why"></a>
 
 There are several reasons:
 - When there are a substantial seperation between classes, the coefficents in logistic regression are suprisingly unstable. This method does not suffer from this problem
@@ -7,7 +13,7 @@ There are several reasons:
 
 - The methods in this section can be naturally extend to more than 2 classes. In the case of more than 2 classes, we can also use multinomial logistic regression.
 
-# Bayes's Theorem:
+# Bayes's Theorem: <a id = "bayes"></a>
 
 Reminder:
 $$P(A | B) = \frac{P(B | A) P(A)}{P(B)}$$
@@ -33,7 +39,7 @@ Let's break down the equation into 2 parts:
 
 As we know about these two terms from the remap, term $\pi_k$ stands for $P(Y = k)$ and $f_k(x)$ stands for $P(X = x | Y = k)$. Clearly, estimating $\pi_k$ is easy if we have the sample from the population, we simply compute the fraction of the trainning observations that belongs to the $k$-th class. However, estimating $f_k(x)$ is much more challenging. As we will see, to estimate $f_k(x)$, we typically have to make some assumption.
 
-# Linear Discirminant Analysis for $p = 1$
+# Linear Discirminant Analysis for $p = 1$ <a id = "lda-p1"></a>
 For now, let's assume that $p = 1$, means that we only have 1 feature in our observations. In order to decide which class does $x$ belongs to, we will estimate $f_k(x)$ and plug into the equation to find $P_k(x)$ and then conclude that $x$ belongs to the class that has the highest $P_k(x)$.
 
 In particular, we will assume that $f_k(x)$ is ***normal*** or ***Gaussian***. In the one dimensional settings, the normal density function takes the form:
@@ -48,14 +54,30 @@ $$P_k(x) = \frac{\pi_k\frac{1}{\sqrt{2\pi}\sigma} exp(-\frac{1}{2\sigma^2}(x - \
 
 To find the class where $x$ belongs, we need to find class $k$ whereas $P_k(x)$ is maximal, which means:
 
-$$\delta_k(x) = \underset{k}{argmax} \frac{\pi_k\frac{1}{\sqrt{2\pi}\sigma} exp(-\frac{1}{2\sigma^2}(x - \mu_k)^2)}{\sum_{l = 1}^K\pi_l\frac{1}{\sqrt{2\pi}\sigma} exp(-\frac{1}{2\sigma^2}(x - \mu_l)^2)}$$
+$$\underset{k}{argmax } \frac{\pi_k\frac{1}{\sqrt{2\pi}\sigma} exp(-\frac{1}{2\sigma^2}(x - \mu_k)^2)}{\sum_{l = 1}^K\pi_l\frac{1}{\sqrt{2\pi}\sigma} exp(-\frac{1}{2\sigma^2}(x - \mu_l)^2)}$$
 
-$$\Leftrightarrow \delta_k(x) = \underset{k}{argmax} \pi_k \frac{1}{\sqrt{2\pi}\sigma} exp(-\frac{1}{2\sigma^2}(x - \mu_k)^2)$$
+$$= \underset{k}{argmax } \pi_k \frac{1}{\sqrt{2\pi}\sigma} exp(-\frac{1}{2\sigma^2}(x - \mu_k)^2)$$
 
-$$\Leftrightarrow \delta_k(x) = \underset{k}{argmax} \pi_k  exp(-\frac{1}{2\sigma^2}(x - \mu_k)^2)$$
+$$= \underset{k}{argmax } \pi_k  exp(-\frac{1}{2\sigma^2}(x - \mu_k)^2)$$
 
 
-$$\Leftrightarrow \delta_k(x) = \underset{k}{argmax} \log(\pi_k) + \frac{x\mu_k}{\sigma^2} - \frac{\mu_k^2}{2\sigma^2}$$
+$$= \underset{k}{argmax } \log(\pi_k) + \frac{x\mu_k}{\sigma^2} - \frac{\mu_k^2}{2\sigma^2}$$
+
+Therefore, the discriminant function can be written as follow:
+
+$$\delta_k(x) = \log(\pi_k) + \frac{x\mu_k}{\sigma^2} - \frac{\mu_k^2}{2\sigma^2}$$
+
+$$\Leftrightarrow \delta_k(x) = \underbrace{x\frac{\mu_k}{\sigma^2}}_{\text{coefficent of } x} - \underbrace{\frac{\mu_k^2}{2\sigma^2} + \log(\pi_k)}_{\text{constant term}}$$
 
 
 The terms Linear Discriminant Analysis is from the fact that the discriminant function $\delta_k(x)$ is in linear form.
+
+# Linear Discriminan Analysis for $p > 1$ <a id = "lda-p2"></a>
+We will now extend the LDA classifier to the case of multiple predictor. To do this, we will say that $X = (X_1 , X_2 , ... , X_p)$ is drawn from a ***multi-variate normal*** or ***multi-variate Gaussian*** distribution, with a class-specific mean vector $\mu$ and a common covariance matrix $\Sigma$. Furthermore, we have :
+
+$$X \sim \mathcal{N}(\mu , \Sigma)$$
+$$\mu = E[X] = E[(X_1 , X_2 , ... , X_p)]$$
+$$\Sigma_{i , j} = E[(X_i - \mu_i)(X_j - \mu_j)] = \text{Cov}(X_i , X_j)$$
+
+Formally, the multivariate Gaussian density is define as
+
