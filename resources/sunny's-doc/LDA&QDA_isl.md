@@ -81,3 +81,12 @@ $$\Sigma_{i , j} = E[(X_i - \mu_i)(X_j - \mu_j)] = \text{Cov}(X_i , X_j)$$
 
 Formally, the multivariate Gaussian density is define as
 
+$$f_k(x) = \frac{1}{(2\pi)^{p/2}|\Sigma|^{1/2}} \exp(-\frac{1}{2}(x - \mu_k)^T \Sigma^{-1} (x - \mu_k))$$
+
+Plugging into the LDA equation and perform some algebra, we will see that the Bayes classifier assigns $X = x$ to the class for which
+
+$$\delta_k(x) = \mu_k^T \Sigma^{-1}x - \frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k + \log(\pi_k)$$
+
+is the largest. As we can see, this is the vector/matrix version of the original LDA for $p = 1$.
+
+# Quadratic Discriminant Analysis 
