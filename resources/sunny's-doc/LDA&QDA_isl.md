@@ -19,9 +19,13 @@ Reminder:
 $$P(A | B) = \frac{P(B | A) P(A)}{P(B)}$$
 
 In the classification problem, we intend to estimate the probability that a point $x$ fall into a class $k$:
+
 $$P(Y = k | X = x)$$
+
 Based on Bayes's Theorem, we have:
+
 $$P(Y = k | X = x) = \frac{P(X = x | Y = k) P(Y = k)}{P(X = x)}$$
+
 Let's remap our terms:
 - $P(X = x | Y = k) = f_k(x)$
 - $P(Y = k) = \pi_k$
@@ -29,6 +33,7 @@ Let's remap our terms:
 - $P(Y = y | X = x) = P_k(x)$
 
 Rewrite the equation:
+
 $$P_k(x) =  \frac{\pi_k f_k(x)}{\sum_{l = 1}^{K}\pi_l f_l(x)} $$
 
 The above equation is the essential of Linear Discriminant Analysis and Quadratic Discriminant Analysis.
