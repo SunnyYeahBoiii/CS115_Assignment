@@ -77,7 +77,7 @@ $$\Leftrightarrow \delta_k(x) = \underbrace{x\frac{\mu_k}{\sigma^2}}_{\text{coef
 
 The terms Linear Discriminant Analysis is from the fact that the discriminant function $\delta_k(x)$ is in linear form.
 
-# Linear Discriminan Analysis for $p > 1$ <a id = "lda-p2"></a>
+# Linear Discriminant Analysis for $p > 1$ <a id = "lda-p2"></a>
 We will now extend the LDA classifier to the case of multiple predictor. To do this, we will say that $X = (X_1 , X_2 , ... , X_p)$ is drawn from a ***multi-variate normal*** or ***multi-variate Gaussian*** distribution, with a class-specific mean vector $\mu$ and a common covariance matrix $\Sigma$. Furthermore, we have :
 
 $$X \sim \mathcal{N}(\mu , \Sigma)$$
