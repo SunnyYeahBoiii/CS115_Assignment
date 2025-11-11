@@ -77,6 +77,13 @@ $$\Leftrightarrow \delta_k(x) = \underbrace{x\frac{\mu_k}{\sigma^2}}_{\text{coef
 
 The terms Linear Discriminant Analysis is from the fact that the discriminant function $\delta_k(x)$ is in linear form.
 
+For instances, if $K = 2$ and $\pi_1 = \pi_2$. Based on the discriminant function, the Bayes decision boundary is the point for which $\delta_1(x) = \delta_2(x)$; one can show this amounts to:
+
+$$x = \frac{\mu_1^2 - \mu_2^2}{2(\mu_1 - \mu_2)} = \frac{\mu_1 + \mu_2}{2}$$
+
+Let's generalize it by removing the $\pi_1 = \pi_2$ assumption. Using some algebra, we can see the boundary decision:
+$$x = \frac{\mu_1 + \mu_2}{2} + (\log(\pi_2) - \log(\pi_1)) \cdot \frac{\sigma^2}{\mu_1 - \mu_2}$$
+
 # Linear Discriminant Analysis for $p > 1$ <a id = "lda-p2"></a>
 We will now extend the LDA classifier to the case of multiple predictor. To do this, we will say that $X = (X_1 , X_2 , ... , X_p)$ is drawn from a ***multi-variate normal*** or ***multi-variate Gaussian*** distribution, with a class-specific mean vector $\mu$ and a common covariance matrix $\Sigma$. Furthermore, we have :
 
