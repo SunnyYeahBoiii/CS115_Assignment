@@ -30,11 +30,11 @@ This assignment is focused on Linear Discriminant Analysis and Quadratic Discrim
             <td>Vũ Minh Phương</td>
         </tr>
         <tr>
-            <td></td>
+            <td>24520755</td>
             <td>Nguyễn Lê Duy Khang</td>
         </tr>
         <tr>
-            <td></td>
+            <td>24521703</td>
             <td>Phạm Ngọc Phú Thịnh</td>
         </tr>
     </table>
