@@ -44,7 +44,7 @@ Let's break down the equation into 2 parts:
 
 As we know about these two terms from the remap, term $\pi_k$ stands for $P(Y = k)$ and $f_k(x)$ stands for $P(X = x | Y = k)$. Clearly, estimating $\pi_k$ is easy if we have the sample from the population, we simply compute the fraction of the trainning observations that belongs to the $k$-th class. However, estimating $f_k(x)$ is much more challenging. As we will see, to estimate $f_k(x)$, we typically have to make some assumption.
 
-# Linear Discirminant Analysis for $p = 1$ <a id = "lda-p1"></a>
+# Linear Discriminant Analysis for $p = 1$ <a id = "lda-p1"></a>
 For now, let's assume that $p = 1$, means that we only have 1 feature in our observations. In order to decide which class does $x$ belongs to, we will estimate $f_k(x)$ and plug into the equation to find $P_k(x)$ and then conclude that $x$ belongs to the class that has the highest $P_k(x)$.
 
 In particular, we will assume that $f_k(x)$ is ***normal*** or ***Gaussian***. In the one dimensional settings, the normal density function takes the form:
@@ -101,4 +101,10 @@ $$\delta_k(x) = \mu_k^T \Sigma^{-1}x - \frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k + \log
 
 is the largest. As we can see, this is the vector/matrix version of the original LDA for $p = 1$.
 
+Based on the discriminant function, we can find the boundary decision lines for each class, which represent the set of values $X$ for whichc $\delta_k(x) = \delta_{l}(x)$
+
+$$\mu_k^T \Sigma^{-1}x - \frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k + \log(\pi_k) = \mu_l^T \Sigma^{-1}x - \frac{1}{2}\mu_l^T\Sigma^{-1}\mu_l + \log(\pi_l)$$
+
 # Quadratic Discriminant Analysis 
+
+
