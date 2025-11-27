@@ -107,4 +107,9 @@ $$\mu_k^T \Sigma^{-1}x - \frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k + \log(\pi_k) = \mu_
 
 # Quadratic Discriminant Analysis 
 
+As we discussed, LDA assumes that the observation within each class is drawn from a multivariate Gaussian distribution with a class-specific mean vector and a covariance matrix is common to all $K$ classes. QDA provides an alternative approach. Like LDA, QDA classifier results from assuming classes were drawn from a Gaussian distribution, plugging estimates for the parameters into Bayes theorem in order to perfrom prediction. However, unlike LDA, QDA assumes that each class has it own coveriance matrix. That is, it assumes an observation from the $k$-th class is of the from $X \sim N(\mu_k , \Sigma_k)$, where $\Sigma_k$ is a covariance matrix for the $k$-th class. Under this assumption, the Bayes classifier assigns an observation $X=x$ to the class which
+
+$$\delta_k(x) = -\frac{1}{2}(x - \mu_k)^T\Sigma_k^{-1}(x - \mu_k) - \frac{1}{2}\text{log}|\Sigma_k| + \text{log}\pi_k$$
+
+is the largest
 
